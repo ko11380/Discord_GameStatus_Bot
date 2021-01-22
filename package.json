@@ -1,0 +1,35 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Node.js GameStatus&Util Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ko11380/Discord_GameStatus_Bot.git"
+  },
+  "keywords": [
+    "Yume_Bot"
+  ],
+  "author": "seoseonyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ko11380/Discord_GameStatus_Bot"
+  },
+  "homepage": "https://github.com/ko11380/Discord_GameStatus_Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "fs": "0.0.1-security",
+    "mariadb": "^2.4.2",
+    "node-html-to-image": "^3.0.1",
+    "puppeteer": "^5.3.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0",
+    "urlencode": "^1.1.0"
+  },
+  "devDependencies": {}
+}
