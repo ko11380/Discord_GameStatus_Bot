@@ -12,10 +12,10 @@ getLoginCookie();
 
 const sequelize = new Sequelize(config.database, config.db_id, config.db_pw, {
 	host: config.db_host,
-	dialect: 'mariadb',
+	dialect: 'mysql',
     logging: false,
-    dialectOptions: {
-        timezone: "Etc/GMT+9"
+    optime:{
+	    timezone : '+09:00'
     }
 });
 
@@ -256,7 +256,7 @@ function sattusCardCR(client,message,origin_username,mode){
                                         </head>
                                     
                                         <body>
-                                            <div style="background-image:url(http://egong.kr/bot/bg.png);">
+                                            <div style="background-image:url(https://i.imgur.com/DlmGebp.png);">
                                                 <div class="wrapper" style="width: 600px; height: 320px;">
                                                     <div class="top">
                                                         <div class="top-top"></div>
@@ -385,7 +385,7 @@ function sendLoginDiscord(client,log){
 
 
 function sendcannotfound(message){
-        message.reply('```diff\n전적검색방법\n1. https://www.callofduty.com/ko/ 사이트에 로그인한다.\n2. 계정설정에서 계정연결 탭으로들어간다.\n3. BATTLE.NET 계정을 연동후 아래 링크의 사진과같이 설정한다.\n4. 검색시 엑티비전 닉네임이아닌 연동한 배틀넷 이름과 태그로 검색한다.\n\n[주의사항]\n이미 아래 사진과 같이 설정되어 있었던경우 전부 None으로 변경했다가 다시 사진과같이 재설정하셔야합니다.\n\n[3번 참고사진]\nhttps://i.ibb.co/x1yph8q/11111.png\n\n잘이해가 안되는부분이나 도움이필요하시면 https://discord.gg/chAVSea 에서 #help 게시판 또는 서선유#7777 에게 DM 주세요\n```')
+        message.reply('```diff\n전적검색방법\n1. https://www.callofduty.com/ko/ 사이트에 로그인한다.\n2. 계정설정에서 계정연결 탭으로들어간다.\n3. BATTLE.NET 계정을 연동후 아래 링크의 사진과같이 설정한다.\n4. 검색시 엑티비전 닉네임이아닌 연동한 배틀넷 이름과 태그로 검색한다.\n\n[주의사항]\n이미 아래 사진과 같이 설정되어 있었던경우 전부 None으로 변경했다가 다시 사진과같이 재설정하셔야합니다.\n\n[3번 참고사진]\nhttps://i.ibb.co/x1yph8q/11111.png\n\n잘이해가 안되는부분이나 도움이필요하시면 https://discord.gg/CNkve2QDMG 에서 #help 게시판 또는 서선유#7777 에게 DM 주세요\n```')
             .then(() => console.log(`이름 : ${message.author.username}, 정보를 찾을수 없음 in ${message.guild.name}`))
             .catch(console.error);
 }

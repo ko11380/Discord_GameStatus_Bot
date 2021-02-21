@@ -1,4 +1,4 @@
-const { prefix, token } = require('./config.json');
+const { prefix, token, testToken } = require('./config.json');
 const fs = require('fs');
 const Discord = require('discord.js');
 const Client = require('./struct/Client.js');
@@ -23,7 +23,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if(message.channel.type === "dm" && !message.author.bot){
-        message.reply("https://discord.gg/chAVSea");
+        message.reply("https://discord.gg/CNkve2QDMG");
     }
     if(!message.content.startsWith(prefix)) return; //명령어로 시작하지않거나 dm일경우 무시
     if (message.author.bot) return; //다른 봇 무시
@@ -46,4 +46,4 @@ client.on('message', message => {
     }
 });
 
-client.login(token);
+client.login(testToken);
